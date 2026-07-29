@@ -3,21 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Silicon Nexus | Circuits & Code - Where Engineers Build Together</title>
-<meta name="description" content="Silicon Nexus | Circuits & Code is a community and GitHub organization for engineers to collaborate on projects, share ideas and resources, write code, design circuits, and study together. Nexus Study Lab is one of the tools we've built along the way.">
-<!-- Favicon -->
-<!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="https://github.com/snx-automation/site/blob/main/screenshots/icon1.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://github.com/snx-automation/site/blob/main/screenshots/icon1.png">
-<link rel="icon" href="https://github.com/snx-automation/site/blob/main/screenshots/icon1.png" sizes="any">
-<link rel="icon" type="image/svg+xml" href="https://github.com/snx-automation/site/blob/main/screenshots/icon1.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://github.com/snx-automation/site/blob/main/screenshots/icon1.png">
-<link rel="mask-icon" href="https://github.com/snx-automation/site/blob/main/screenshots/icon1.png" color="#8A90FF">
-<link rel="manifest" href="/site2.webmanifest">
+<title>Synectix Forge - Where Engineers Build Together</title>
+<meta name="description" content="Synectix Forge is a community and GitHub organization for engineers to collaborate on projects, share ideas and resources, write code, design circuits, and study together. Synectix Study Lab is one of the tools we've built along the way.">
 
-<!-- Windows tiles -->
-<meta name="msapplication-TileColor" content="#0D0E18">
-<meta name="msapplication-config" content="/browserconfig.xml">
+ <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icon1.png">
+    <link rel="shortcut icon" href="icon1.png">
+    <link rel="apple-touch-icon" href="icon1.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quietplace.space/">
+    <meta property="og:title" content="Synectix Forge">
+    <meta property="og:description" content="A community and GitHub organization for engineers to collaborate on projects, share ideas and resources, write code, design circuits, and study together. Synectix Study Lab is one of the tools we've built along the way.">
+    <meta property="og:image" content="https://quietplace.space/icon1.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -375,10 +374,23 @@
   .product-card.is-future{
     align-items:center; justify-content:center; text-align:center;
     padding:50px 30px; gap:12px; border-style:dashed;
+    cursor:pointer;
   }
-  .product-card.is-future .ring{ width:32px; height:32px; border-width:1.5px; color:var(--ink-faint); }
+  .product-card.is-future .ring{ width:32px; height:32px; border-width:1.5px; color:var(--ink-faint); transition:color .25s, border-color .25s; }
   .product-card.is-future h3{ font-size:18px; font-family:'Inter',sans-serif; font-weight:600; color:var(--ink-soft); }
   .product-card.is-future p{ color:var(--ink-faint); font-size:14px; max-width:280px; }
+  .product-card.is-future:hover{ border-color:var(--accent); }
+  .product-card.is-future:hover .ring{ color:var(--accent); }
+  .product-card.is-future:hover h3{ color:var(--ink); }
+
+  .products-more{ text-align:center; margin-top:36px; }
+  .products-more a{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14.5px; font-weight:600; color:var(--ink-soft);
+  }
+  .products-more a:hover{ color:var(--accent-ink); }
+  .products-more svg{ transition:transform .25s var(--ease); }
+  .products-more a:hover svg{ transform:translate(2px,-2px); }
 
   /* ============ SHOWCASE ============ */
   .showcase{ background:var(--accent-soft-2); }
@@ -460,6 +472,7 @@
   .problem-item span{ font-size:16px; color:var(--ink); font-weight:500; }
   .why-copy h2{ font-size:clamp(28px,3.6vw,38px); line-height:1.18; margin-bottom:18px; }
   .why-copy p{ color:var(--ink-soft); font-size:16.5px; line-height:1.7; margin-bottom:16px; }
+  .problem-title{ font-size:22px; margin-bottom:24px; }
 
   /* ============ COMMUNITY (dark) ============ */
   .community{
@@ -573,7 +586,6 @@
   .foot-socials{ display:flex; gap:16px; }
   .foot-socials a{ color:var(--ink-faint); }
   .foot-socials a:hover{ color:var(--accent); }
- .problem-title{ font-size:22px; margin-bottom:24px; }
 </style>
 </head>
 <body>
@@ -581,11 +593,11 @@
   <!-- ============ NAV ============ -->
   <div class="nav-shell">
     <nav class="nav" id="mainNav">
-      <a href="#home" class="nav-logo"><span class="ring"></span>Silicon Nexus</a>
+      <a href="#home" class="nav-logo"><span class="ring"></span>Synectix Forge</a>
       <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="https://quietplace.space/streak.html">Study Lab</a>
+        <a href="projects.html">Projects</a>
+        <a href="#features">Study Lab</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#community">Community</a>
         <a href="#faq">FAQ</a>
@@ -602,8 +614,8 @@
   <div class="mobile-panel" id="mobilePanel">
     <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
     <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="https://quietplace.space/streak.html">Study Lab</a>
+    <a href="projects.html">Projects</a>
+    <a href="#features">Study Lab</a>
     <a href="#roadmap">Roadmap</a>
     <a href="#community">Community</a>
     <a href="#faq">FAQ</a>
@@ -614,17 +626,17 @@
     <div class="hero-media hero-fallback" id="heroMedia">
       <!-- Replace this block with your own background: -->
            <img src="download.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
-           
+
            <!-- <video autoplay muted loop playsinline><source src="hero-bg.webm" type="video/webm"></video> -->
-           
+
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
       <span class="hero-badge">⚡ A community for engineers, by engineers</span>
       <h1>Build together. <em>Engineer</em> together.</h1>
-      <p class="sub">Silicon Nexus | Circuits & Code is a community and open-source organization where engineers collaborate on projects, trade ideas, share resources, write code, design circuits, and study side by side. Nexus Study Lab - our focus timer - is one of the things we've built along the way.</p>
+      <p class="sub">Synectix Forge is a community and open-source organization where engineers collaborate on projects, trade ideas, share resources, write code, design circuits, and study side by side. Synectix Study Lab - our focus timer - is one of the things we've built along the way.</p>
       <div class="hero-actions">
-        <a href="#products" class="btn btn-primary">See What We Build</a>
+        <a href="projects.html" class="btn btn-primary">See What We Build</a>
         <a href="#community" class="btn btn-glass">Join Discord</a>
       </div>
     </div>
@@ -639,7 +651,7 @@
     <div class="wrap">
       <div class="section-head center reveal">
         <span class="eyebrow"><span class="ring"></span>What We've Built</span>
-        <h2>The Silicon Nexus lineup</h2>
+        <h2>The Synectix Forge lineup</h2>
         <p>Every project below started as an idea in the Discord and grew from there. This list will keep growing as the community ships more.</p>
       </div>
 
@@ -648,11 +660,11 @@
         <div class="product-card reveal">
           <div class="product-shot pshot-1">
             <img src="screenshots/focus-session.png" alt="Nexus Study Lab screenshot" onerror="this.remove()">
-            <span class="product-tag">Nexus Study Lab</span>
+            <span class="product-tag">Synectix Study Lab</span>
           </div>
           <div class="product-body">
             <span class="product-status"><span class="ring"></span>Live · Web App &amp; Discord Activity</span>
-            <h3>Nexus Study Lab</h3>
+            <h3>Synectix Study Lab</h3>
             <p>Our flagship focus timer - Pomodoro sessions, study rooms, streaks, and analytics, built for engineers who work best side by side.</p>
             <a href="https://quietplace.space/app.html" target="_blank" rel="noopener" class="product-link">Open the app <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
           </div>
@@ -666,11 +678,12 @@
           <div class="product-body">
             <span class="product-status"><span class="ring"></span>Live · Discord Bot</span>
             <h3>NexusAI</h3>
-            <p>The bot running the show inside Silicon Nexus - engagement pulses, utilities, and moderation tools built for the server.</p>
-            <a href="https://discord.com/oauth2/authorize?client_id=1419232338792939606" target="_blank" rel="noopener" class="product-link">Meet the bot <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+            <p>The bot running the show inside Synectix Forge - engagement pulses, utilities, and moderation tools built for the server.</p>
+            <a href="https://discord.gg/SNhzuKCvhw" target="_blank" rel="noopener" class="product-link">Meet the bot <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
           </div>
         </div>
-<div class="product-card reveal">
+
+        <div class="product-card reveal">
           <div class="product-shot pshot-3">
             <img src="screenshots/EngineLab.png" alt="Engine Lab screenshot" onerror="this.remove()">
             <span class="product-tag">Engine Lab</span>
@@ -678,31 +691,35 @@
           <div class="product-body">
             <span class="product-status"><span class="ring"></span>Live · Browser Driving Sim</span>
             <h3>Engine Lab</h3>
-            <p>A browser-based driving sim built around real car sound — every engine note, gear shift, and tire screech modeled and playable. Accelerator, brake, and clutch controls let you drive the sound itself, not just the car.</p>
+            <p>A browser-based driving sim built around real car sound - every engine note, gear shift, and tire screech modeled and playable. Accelerator, brake, and clutch controls let you drive the sound itself, not just the car.</p>
             <a href="https://snx-automation.github.io/EngineLab/" target="_blank" rel="noopener" class="product-link">Play Engine Lab <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
           </div>
         </div>
 
         <div class="product-card reveal">
           <div class="product-shot pshot-4">
-            <img src="screenshots/signal-particles-1784093039170.png" alt="Rexona screenshot" onerror="this.remove()">
+            <img src="screenshots/rexona.png" alt="Rexona screenshot" onerror="this.remove()">
             <span class="product-tag">RESONIX</span>
           </div>
           <div class="product-body">
             <span class="product-status"><span class="ring"></span>Live · Music Visualizer</span>
             <h3>RESONIX</h3>
-            <p>A real-time music visualizer that runs entirely in your browser. Share a tab with "Share tab audio" enabled and watch it react instantly — everything is processed locally, so no audio ever leaves your device.</p>
+            <p>A real-time music visualizer that runs entirely in your browser. Share a tab with "Share tab audio" enabled and watch it react instantly - everything is processed locally, so no audio ever leaves your device.</p>
             <a href="https://snx-automation.github.io/signal/" target="_blank" rel="noopener" class="product-link">Launch RESONIX <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
           </div>
         </div>
 
-        <div class="product-card is-future reveal">
+        <a href="projects.html" class="product-card is-future reveal">
           <span class="ring"></span>
           <h3>More on the way</h3>
-          <p>This lineup grows as the community ships. New projects get added here first.</p>
-        </div>
+          <p>This lineup grows as the community ships. See the full catalog and what's coming next.</p>
+        </a>
 
       </div>
+
+      <p class="products-more reveal">
+        <a href="projects.html">View all projects <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </p>
     </div>
   </section>
 
@@ -839,7 +856,7 @@
   </section> -->
 
   <!-- ============ WHY ============ -->
-<section id="why">
+  <section id="why">
     <div class="wrap why">
       <div class="problem-list-wrap reveal">
         <span class="eyebrow"><span class="ring"></span>Known Issues</span>
@@ -853,21 +870,22 @@
         </div>
       </div>
       <div class="why-copy reveal">
-        <span class="eyebrow"><span class="ring"></span>Why Silicon Nexus</span>
+        <span class="eyebrow"><span class="ring"></span>Why Synectix Forge </span>
         <h2>A place engineers actually wanted to exist</h2>
-        <p>Most engineering work happens alone - a circuit in Cadence, a repo nobody else sees, a question with no one around to answer it. Silicon Nexus | Circuits & Code exists to change that.</p>
+        <p>Most engineering work happens alone - a circuit in Cadence, a repo nobody else sees, a question with no one around to answer it. Synectix Forge exists to change that.</p>
         <p>It's a Discord server and GitHub organization where engineers collaborate on real projects, share ideas and resources, review each other's work, and study side by side - whether that's writing code, designing circuits, or just staying consistent.</p>
-        <p>Nexus Study Lab, the focus timer you've seen throughout this page, is one small piece of that - built by the community, for the community.</p>
+        <p>Synectix Study Lab, the focus timer you've seen throughout this page, is one small piece of that - built by the community, for the community.</p>
       </div>
     </div>
   </section>
+
   <!-- ============ COMMUNITY ============ -->
   <section id="community" class="community">
     <div class="wrap">
       <div class="section-head center reveal">
         <span class="eyebrow"><span class="ring"></span>Community</span>
         <h2>You don't have to build alone</h2>
-        <p><strong>Silicon Nexus | Circuits &amp; Code</strong> is a Discord server and GitHub organization for engineers to collaborate on projects, share ideas and resources, write code, and design circuits together - with Nexus Study Lab as one of the tools we've built along the way.</p>
+        <p><strong>Synectix Forge</strong> is a Discord server and GitHub organization for engineers to collaborate on projects, share ideas and resources, write code, and design circuits together - with Synectix Study Lab as one of the tools we've built along the way.</p>
       </div>
       <div class="comm-grid reveal">
         <div class="comm-item"><span class="ring"></span><span>Collaborate on projects</span></div>
@@ -878,10 +896,10 @@
         <div class="comm-item"><span class="ring"></span><span>Stay accountable</span></div>
       </div>
       <div class="comm-cta reveal">
-        <a href="https://discord.gg/SNhzuKCvhw" class="btn btn-discord">Join Silicon Nexus →</a>
+        <a href="https://discord.gg/SNhzuKCvhw" class="btn btn-discord">Join Synectix Forge Discord →</a>
         <a href="https://quietplace.space/app.html" class="btn btn-app-outline" target="_blank" rel="noopener">Open the Study App ↗</a>
       </div>
-      <p class="comm-caption reveal">Also runs as a Discord Activity inside the Silicon Nexus server - same timer, right in your voice channel.</p>
+      <p class="comm-caption reveal">Also runs as a Discord Activity inside the Synectix Forge server - same timer, right in your voice channel.</p>
     </div>
   </section>
 
@@ -891,7 +909,7 @@
       <div class="section-head center reveal">
         <span class="eyebrow"><span class="ring"></span>Roadmap</span>
         <h2>Built gradually, in the open</h2>
-        <p>Silicon Nexus keeps growing in public - here's where things stand right now.</p>
+        <p>Synectix Forge keeps growing in public - here's where things stand right now.</p>
       </div>
 
       <div class="roadmap-line reveal" style="max-width:700px;margin:0 auto;">
@@ -907,7 +925,7 @@
           <span class="road-status">Current development</span>
           <div class="road-items">
             <div class="road-row"><h4>Study Rooms</h4><p>- shared live sessions</p></div>
-            <div class="road-row"><h4>AI Assistant</h4><p>-in-app study help</p></div>
+            <div class="road-row"><h4>AI Assistant</h4><p>—-in-app study help</p></div>
           </div>
         </div>
         <div class="road-group is-future">
@@ -932,7 +950,7 @@
       <div class="faq-list reveal">
 
         <div class="faq-item">
-          <button class="faq-q"><span>Is Nexus Study Lab free to use?</span><span class="plus"></span></button>
+          <button class="faq-q"><span>Is Synectix Study Lab free to use?</span><span class="plus"></span></button>
           <div class="faq-a"><div class="faq-a-inner">Yes - the core timer, analytics, and community access are free. Optional upgrades exist for advanced AI usage and extended study room features.</div></div>
         </div>
 
@@ -942,18 +960,18 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-q"><span>Can I use Nexus Study Lab on my phone?</span><span class="plus"></span></button>
+          <button class="faq-q"><span>Can I use Synectix Study Lab on my phone?</span><span class="plus"></span></button>
           <div class="faq-a"><div class="faq-a-inner">The web app is fully responsive today, and a dedicated mobile companion app is on the roadmap.</div></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q"><span>How is this different from other study timers?</span><span class="plus"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Most timers stand alone. Nexus Study Lab is backed by Silicon Nexus | Circuits &amp; Code - a community of engineers collaborating on real projects - so consistency comes from the people around you, not willpower alone.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Most timers stand alone. Synectix Study Lab is backed by Synectix Forge - a community of engineers collaborating on real projects - so consistency comes from the people around you, not willpower alone.</div></div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q"><span>Is the Discord community open to everyone?</span><span class="plus"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Yes - Silicon Nexus | Circuits &amp; Code welcomes engineers and students at any level, whether you're here to collaborate on projects, share resources, design circuits, write code, or just study.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Yes - Synectix Forgewelcomes engineers and students at any level, whether you're here to collaborate on projects, share resources, design circuits, write code, or just study.</div></div>
         </div>
 
         <div class="faq-item">
@@ -963,7 +981,7 @@
 
         <div class="faq-item">
           <button class="faq-q"><span>Where's the source code?</span><span class="plus"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">Nexus Study Lab and its related projects are built in the open under the Silicon Nexus | Circuits &amp; Code GitHub organization.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Synectix Study Lab  and its related projects are built in the open under the Synectix Forge GitHub organization.</div></div>
         </div>
 
       </div>
@@ -975,21 +993,21 @@
     <div class="wrap">
       <div class="foot-top">
         <div class="foot-brand">
-          <a href="#home" class="nav-logo"><span class="ring"></span>Silicon Nexus</a>
-          <p>A community and GitHub organization for engineers to collaborate on projects, share ideas and resources, write code, design circuits, and grow together. Nexus Study Lab is one of the tools we've built along the way.</p>
+          <a href="#home" class="nav-logo"><span class="ring"></span>Synectix Forge</a>
+          <p>A community and GitHub organization for engineers to collaborate on projects, share ideas and resources, write code, design circuits, and grow together. Synectix Study Lab  is one of the tools we've built along the way.</p>
         </div>
         <div class="foot-cols">
           <div class="foot-col">
-            <h5>Products</h5>
-            <a href="#products">All Products</a>
-            <a href="https://quietplace.space/app.html" target="_blank" rel="noopener">Nexus Study Lab ↗</a>
+            <h5>Projects</h5>
+            <a href="projects.html">All Projects</a>
+            <a href="https://quietplace.space/app.html" target="_blank" rel="noopener">Synectix Study Lab  ↗</a>
             <a href="https://discord.gg/SNhzuKCvhw" target="_blank" rel="noopener">NexusAI</a>
-            <a href="#products">Engine Lab</a>
-            <a href="#products">RESONIX</a>
+            <a href="https://snx-automation.github.io/EngineLab/" target="_blank" rel="noopener">Engine Lab ↗</a>
+            <a href="https://snx-automation.github.io/signal/" target="_blank" rel="noopener">RESONIX ↗</a>
           </div>
           <div class="foot-col">
-            <h5>Nexus Study Lab</h5>
-            <a href="https://quietplace.space/streak.html">Features</a>
+            <h5>Synectix Study Lab </h5>
+            <a href="#features">Features</a>
             <a href="#showcase">Screenshots</a>
             <a href="#roadmap">Roadmap</a>
             <a href="https://quietplace.space/app.html" target="_blank" rel="noopener">Open Study App ↗</a>
@@ -1004,12 +1022,12 @@
             <h5>Legal</h5>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="mailto:xyz@gmail.com">Contact</a>
+            <a href="mailto:siliconnexuslab@gmail.com">Contact</a>
           </div>
         </div>
       </div>
       <div class="foot-bottom">
-        <span>© 2026 Silicon Nexus | Circuits &amp; Code. Nexus Study Lab is one of our projects.</span>
+        <span>© 2026 Synectix Forge.</span>
         <div class="foot-socials">
           <a href="https://github.com/silicon-nexus-study-lab" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.3 6.84 9.65.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.51-3.5-.68-3.72-1.31-.13-.33-.68-1.35-1.16-1.63-.4-.22-.97-.75-.01-.76.9-.02 1.54.84 1.76 1.19 1.03 1.74 2.68 1.25 3.33.95.1-.75.4-1.25.73-1.54-2.55-.29-5.21-1.28-5.21-5.68 0-1.25.44-2.28 1.17-3.08-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.14 1.18.91-.26 1.88-.39 2.85-.39.97 0 1.94.13 2.85.39 2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.11 3.06.73.8 1.17 1.82 1.17 3.08 0 4.41-2.67 5.39-5.22 5.67.41.36.77 1.07.77 2.16 0 1.56-.01 2.81-.01 3.2 0 .27.18.6.69.49C19.13 20.55 22 16.74 22 12.25 22 6.58 17.52 2 12 2Z"/></svg></a>
           <a href="#" aria-label="Instagram" onclick="event.preventDefault(); alert('Instagram - coming soon!');"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.4" cy="6.6" r="1"/></svg></a>
@@ -1039,7 +1057,7 @@
   }, { threshold: 0.12 });
   reveals.forEach(el => io.observe(el));
 
-// ---- showcase carousel (only runs if the section exists) ----
+  // ---- showcase carousel (only runs if the section exists) ----
   const showcaseStage = document.querySelector('.showcase-stage');
   if (showcaseStage) {
     const slides = Array.from(document.querySelectorAll('.screen-slide'));
